@@ -1,0 +1,18 @@
+.bullets{
+  @include pad(100px 0 0 0);
+  @include outer-container;
+}
+
+.grid-items{
+  @include outer-container;
+  @include pad(100px 0);
+}
+
+.device-background{
+  @include margin(200px 0);
+  @include outer-container();
+}
+
+article.type-system-geometric{
+  @include outer-container();
+}

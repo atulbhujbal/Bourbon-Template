@@ -1,0 +1,63 @@
+#header{
+  background: #e9b1ff;
+
+  @include outer-container;
+
+}
+
+#wrapper{
+  background: #418ad2;
+  min-height: 100px;
+  @include outer-container;
+
+  .row{
+    @include row();
+    min-height: 50px;
+    background: #b8c882;
+
+    ul>li{
+      @include span-columns(3);
+      @include omega(4n);
+      background: lightyellow;
+
+      @include media(min-width 480px max-width 769px){
+        @include span-columns(6);
+        @include omega(2n);
+      }
+
+      @include media(max-width 479px){
+        @include span-columns(12);
+        @include omega();
+      }
+
+
+      &.first{
+        @include linear-gradient(#b8c882,#fff)
+      }
+      &.last{
+        @include retina-image("../images/coffee",contain);
+      }
+    }
+
+    .col-1{
+      @include span-columns(6);
+      @include shift(6);
+      background: #c8bca4;
+    }
+
+    .col-2{
+      @include span-columns(6);
+      @include shift(-12);
+      background: #c8bca4;
+
+    }
+  }
+
+
+}
+
+#footer{
+  background: #fcff50;
+
+  @include outer-container;
+}

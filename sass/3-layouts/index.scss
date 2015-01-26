@@ -1,0 +1,175 @@
+.container{
+  @include outer-container()
+}
+
+
+.heading.white,.heading.white + p{
+  color: #fff;
+}
+section>div.pad{
+  padding: 45px 0;
+}
+
+.center{
+  text-align: center;
+}
+
+#top-contact-details{
+  @include basic(35px,#f3f3f3);
+}
+
+#navigation{
+  @include basic(100px, #fff);
+}
+#featured-slider-container{
+  @include clearfix;
+
+}
+#about{
+  //@include basic(400px, #fff);
+
+  .about-bullets>li.item {
+      @include span-columns(4);
+      text-align: center;
+      @include media(max-width 769px)
+      {
+        @include span-columns(12);
+      }
+    }
+}
+#approach{
+  @include basic(auto, #f3f3f3);
+
+  .steps{
+    @include basic(auto,#fff);
+    @include border-top-radius(3px);
+    @include border-bottom-radius(3px);
+    margin-bottom: 30px;
+    position: relative;
+    @include row();
+
+
+    .step-img{
+      @include span-columns(4);
+    }
+
+    .content{
+      @include span-columns(8);
+
+      .step{
+        background: red;
+        color: #fff;
+        @include pad(45px);
+        @include border-top-radius(6px);
+        @include border-bottom-radius(6px);
+        border: 3px solid #fff;
+        @include position(absolute);
+        @extend %vertical-align;
+      }
+
+      .content-wrapper{
+        padding: 60px;
+      }
+    }
+
+    &.left{
+      .step{
+        margin-left: -7.3%;
+      }
+    }
+    &.right{
+      .step-img{
+        @include shift(8);
+      }
+      .content{
+        @include shift(0);
+
+        .step{
+          margin-left: 63.3%;
+        }
+      }
+    }
+
+  }
+}
+
+#work{
+  @include basic(auto, #de2b24);
+
+  #grid{
+    @include display(table);
+    @include fill-parent;
+
+    .work-item{
+      display: block;
+      float: left;
+      width:50%;
+      border: 0px solid #fff;
+      @include omega(2n);
+      @include omega;
+      overflow: hidden;
+      font-size: 0;
+     .project-name,.project-img{
+       width: 50%;
+       background: #f35e59;
+       color: #fff;
+        @include omega;
+       overflow: hidden;
+        @include display(table-cell);
+       vertical-align: middle;
+       text-align: center;
+      }
+
+      .project-name{
+        font-size: 12px;
+      }
+      .project-img img{
+        width: 100%;
+        height: 100%;
+        font-size:0;
+        line-height: 0;
+
+      }
+    }
+  }
+}
+#facebook-analysis{
+  @include basic(auto, #1287bf);
+
+  .link{
+    border: 3px solid #fff;
+    padding: 14px;
+    border-radius: 50%;
+    color: #fff;
+  }
+
+  #request-form{
+    display: none;
+  }
+
+}
+#get-in-touch{
+  @include basic(400px, #2a2a2a);
+
+  .social-icons-list{
+    @include fill-parent;
+    overflow: hidden;
+
+
+    .social-icons {
+      float:left;
+      display: block;
+      margin-right: 10px;
+      a{
+        border: 3px solid #fff;
+        padding: 10px 15px;
+        @include border-top-radius(7px);
+        @include border-bottom-radius(7px);
+      }
+    }
+  }
+
+}
+#footer-wrapper{
+  @include basic(auto, #515151);
+}
